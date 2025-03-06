@@ -4,21 +4,22 @@
 // Any problem you faced while coding this :no
  
 
-// Your code here along with comments explaining your approach:
+// Your code here along with comments explaining your approach: here implementing tweet class to maintian tweetObject and createdat.
+// as well to maintian followedby list  for particular follower maintain hashmap and to matain tweets of user maintain user and corresponding tweetid and createdAt becuase we need to give most recent tweets.
 class Twitter {
     class Tweet {
         int tweetId;
         int createdAt;
 
-        public Tweet(int tweetId, int createdAt) {
-            this.tweetId = tweetId;
+        public Tweet(int tweetId, int createdAt) {//constructor for tweet
+            this.tweetId = tweetId; //initalizing tweetid and createdAt
             this.createdAt = createdAt;
         }
     }
 
     // Tweet tweet = new Tweet();
-    HashMap<Integer, HashSet<Integer>> followedMap;
-    HashMap<Integer, List<Tweet>> tweetMap;
+    HashMap<Integer, HashSet<Integer>> followedMap; // follower and followedby list
+    HashMap<Integer, List<Tweet>> tweetMap; //user and corresponding tweets -> {tweetid,createdAt}
     int timeStamp;
 
     public Twitter() {
